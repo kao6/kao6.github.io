@@ -1,85 +1,68 @@
-const gulp = require('gulp');
-const autoprefixer = require('gulp-autoprefixer');
-const browserify = require('browserify');
-const buffer = require('vinyl-buffer');
-const cleanCSS = require('gulp-clean-css');
-const eslint = require('gulp-eslint');
-const rename = require('gulp-rename');
-const sass = require('gulp-sass');
-const source = require('vinyl-source-stream');
-const stylelint = require('gulp-stylelint');
-const uglify = require('gulp-uglify');
-const zip = require('gulp-zip');
+var gulp = require('gulp');
+var sass = require('gulp-sass');
+var prefix = require('gulp-autoprefixer');
+var imagemin = require('gulp-imagemin');
+var pngquant = require('imagemin-pngquant');
+var cache = require('gulp-cache');
+var cp = require('child_process');
+var browserSync = require('browser-sync');
 
-function lintStyles() {
-  return gulp.src([
-    './_assets/scss/**/*.scss',
-    '!./_assets/scss/vendor/_normalize.scss',
-    '!./_assets/scss/fonts/*.scss'
-  ])
-    .pipe(stylelint({
-      reporters: [
-        {formatter: 'string', console: true}
-      ]
-    }));
-}
+var jekyll   = process.platform === 'win32' ? 'jekyll.bat' : 'jekyll';
 
-function styles() {
-  return gulp.src('./_assets/scss/app.scss')
-    .pipe(sass().on('error', sass.logError))
-    .pipe(autoprefixer({cascade: false}))
-    .pipe(cleanCSS())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./assets/css'));
-}
+// Build the Jekyll Site
+gulp.task('jekyll-build', function (done) {
+    return cp.spawn( jekyll , ['build'], {stdio: 'inherit'})
+        .on('close', done);
+});
 
-function lint() {
-  return gulp.src([
-    './_assets/js/components/_formcarry.js',
-    './_assets/js/components/_infiniteScroll.js',
-    './_assets/js/components/_mailChimp.js',
-    './_assets/js/components/_miscellaneous.js',
-    './_assets/js/components/_pageTransition.js',
-    './_assets/js/components/_popup.js',
-    './_assets/js/_inits.js'
-  ])
-    .pipe(eslint())
-    .pipe(eslint.format())
-    .pipe(eslint.failAfterError());
-}
+// Rebuild Jekyll and page reload
+gulp.task('jekyll-rebuild', ['jekyll-build'], function () {
+    browserSync.reload();
+});
 
-function scripts() {
-  return browserify('./_assets/js/app.js')
-    .transform('babelify', {presets: ['@babel/preset-env']})
-    .bundle()
-    .pipe(source('app.js'))
-    .pipe(buffer())
-    .pipe(uglify())
-    .pipe(rename({suffix: '.min'}))
-    .pipe(gulp.dest('./assets/js'));
-}
+// Wait for jekyll-build, then launch the Server
+gulp.task('browser-sync', ['sass', 'img', 'jekyll-build'], function() {
+    browserSync({
+        server: {
+            baseDir: '_site'
+        },
+        notify: false
+    });
+});
 
-function dist() {
-  return gulp.src([
-    './**',
-    '!./.DS_Store',
-    '!./.git',
-    '!./node_modules/**'
-  ])
-    .pipe(zip('barber-jekyll.zip'))
-    .pipe(gulp.dest('../'))
-}
+// Compile files
+gulp.task('sass', function () {
+    return gulp.src('assets/css/scss/main.scss')
+        .pipe(sass({
+            outputStyle: 'expanded',
+            onError: browserSync.notify
+        }))
+        .pipe(prefix(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], { cascade: true }))
+        .pipe(gulp.dest('_site/assets/css'))
+        .pipe(browserSync.reload({stream:true}))
+        .pipe(gulp.dest('assets/css'));
+});
 
-function watch() {
-  gulp.watch('./_assets/scss/**/*.scss', styles);
-  gulp.watch('./_assets/js/**/*.js', scripts);
-}
+// Compression images
+gulp.task('img', function() {
+	return gulp.src('assets/img/**/*')
+		.pipe(cache(imagemin({
+			interlaced: true,
+			progressive: true,
+			svgoPlugins: [{removeViewBox: false}],
+			use: [pngquant()]
+		})))
+    .pipe(gulp.dest('_site/assets/img'))
+    .pipe(browserSync.reload({stream:true}));
+});
 
-const build = gulp.series(styles, scripts, watch);
-gulp.task('default', build);
+// Watch scss, html, img files
+gulp.task('watch', function () {
+    gulp.watch('assets/css/scss/**/*.scss', ['sass']);
+    gulp.watch('assets/js/**/*.js', ['jekyll-rebuild']);
+    gulp.watch('assets/img/**/*', ['img']);
+    gulp.watch(['*.html', '_layouts/*.html', '_includes/*.html', '_pages/*.html', '_posts/*'], ['jekyll-rebuild']);
+});
 
-exports.lintStyles = lintStyles;
-exports.styles = styles;
-exports.lint = lint;
-exports.scripts = scripts;
-exports.dist = dist;
+//  Default task
+gulp.task('default', ['browser-sync', 'watch']);
