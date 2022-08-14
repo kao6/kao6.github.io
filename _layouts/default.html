@@ -111,7 +111,7 @@
           </div>
           <!-- Start Countdown -->       
           <div>
-            <ul id="hitungmundur" >
+            <ul id="countdown" >
               <li><span class="days">00</span><p class="days_text">ngày</p></li>
               <li class="separator">:</li>
               <li><span class="hours">00</span><p class="hours_text">giờ</p></li>
@@ -131,13 +131,13 @@
               var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
               var targetDate = '10/15/2022 11:00:00';
 
-              $('#hitungmundur').countdown({
-                date: harih, // TODO Date format: 07/27/2017 17:00:00
+              $('#countdown').countdown({
+                date: targetDate, // TODO Date format: 07/27/2017 17:00:00
                 offset: +7, // TODO Your Timezone Offset
-                day: 'Hari',
-                days: 'Hari'
+                day: 'Ngày',
+                days: 'Ngày'
               }, function () {
-                alert('Done!');
+                alert('Chân thành cám ơn!');
               });
             </script>  
           </div>
