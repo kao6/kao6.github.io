@@ -48,11 +48,7 @@ html {
   font-family: 'Raleway', sans-serif;
 }
 
-@media (max-width: 480px) {
-  .hero{
-    background-position: center;
-  }
-}
+
 
 .hero .title {
   font-family: 'Mrs Saint Delafield', sans-serif;
@@ -66,13 +62,12 @@ html {
 .hero .subtitle {
   padding: 35px;
   color: whitesmoke;
-  font-size: 1.3rem;
+  font-size: 1rem;
 }
 
 .hero .tempatwaktu {
   padding-top: 35px;
   font-size: 1.3rem;
-  
 }
 
 .hero .hero-foot {
@@ -655,4 +650,20 @@ body.preloader-site {
   vertical-align: middle;
   text-align: center;
   padding: 10px;
+}
+
+@media (max-width: 480px) {
+  .hero {
+    background-image: url(https://kao6.github.io/assets/img/hi.jpg);
+    background: linear-gradient(rgba(123, 103, 109, 0.35), rgba(159, 110, 109, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi.jpg") no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    color: white;
+      background-position: center;
+    box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+    font-family: 'Raleway', sans-serif;
+  }
+   .hero-body{
+    padding-top:11em;
+   }
 }
