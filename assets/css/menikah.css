@@ -299,7 +299,7 @@ html {
 
 .nama-lengkap {
   font-family: 'Mrs Saint Delafield', sans-serif;
-  color: #f24951;
+  color: #578443;
   font-size: 3.5rem;
   letter-spacing: 0px;
   padding-bottom: 6px;
@@ -309,7 +309,7 @@ html {
 .ampersand {
 font-size: 5rem;
 font-family: 'Mrs Saint Delafield', sans-serif;
-color: #f24951;
+color: #578443;
 line-height: 5rem;
 display: inline-block;
 vertical-align: middle;
@@ -662,6 +662,9 @@ body.preloader-site {
       background-position: center;
     box-shadow: inset 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
     font-family: 'Raleway', sans-serif;
+  }
+  .hero .title{
+    padding: 0 1em;
   }
    .hero-body{
     padding-top:11em;
