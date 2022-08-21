@@ -654,8 +654,8 @@ body.preloader-site {
 
 @media (max-width: 480px) {
   .hero {
-    background-image: url(https://kao6.github.io/assets/img/hi.jpg);
-    background: linear-gradient(rgba(123, 103, 109, 0.35), rgba(159, 110, 109, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi.jpg") no-repeat;
+    background-image: url(https://kao6.github.io/assets/img/hi-mobile.jpg);
+    background: linear-gradient(rgba(123, 103, 109, 0.35), rgba(159, 110, 109, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi-mobile.jpg") no-repeat;
     background-attachment: fixed;
     background-size: cover;
     color: white;
