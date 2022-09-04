@@ -50,7 +50,7 @@ $(document).ready(function($) {
   $("body").removeClass("preloader-site");
 });
 
-$(window).load(function() {
-  var Body = $("body");
-  Body.addClass("preloader-site");
-});
+// $(window).load(function() {
+//   var Body = $("body");
+//   Body.addClass("preloader-site");
+// });
