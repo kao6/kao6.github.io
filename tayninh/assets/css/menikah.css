@@ -64,6 +64,11 @@ html {
   font-size: 1rem;
 }
 
+.hero .subtitle .pressed{
+  font-size: 2rem;
+  font-weight: 900;
+}
+
 .hero .tempatwaktu {
   padding-top: 35px;
   font-size: 1.3rem;
@@ -268,18 +273,20 @@ html {
   }
 }
 
-.main-content .section-color.pertanyaan {
+.main-content .section-color.tempatngaycuoi {
   padding: 100px;
   background-color: #f24951;
   color: white;
 }
 
-.main-content .section-color.pertanyaan .title,
-.main-content .section-color.pertanyaan .subtitle {
+.main-content .section-color.tempatngaycuoi .title,
+.main-content .section-color.tempatngaycuoi .subtitle {
   color: white;
 }
 
-.main-content .section-color.pertanyaan i {
+
+
+.main-content .section-color.tempatngaycuoi i {
   font-size: 3rem;
   padding: 20px;
 }
