@@ -557,7 +557,7 @@ body.preloader-site {
 
 
 .foto1 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-kang-emil.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/LISA4058.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -566,7 +566,7 @@ body.preloader-site {
 
 
 .foto2 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-cashbac.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/LISA4074.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -574,7 +574,7 @@ body.preloader-site {
 }
 
 .foto3 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-selfie.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/LISA4175.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -582,7 +582,7 @@ body.preloader-site {
 }
 
 .foto4 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-lamaran.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/LISA4433.jpg");
   background-size: cover;
   background-position: top;
   background-repeat:no-repeat;
@@ -590,7 +590,7 @@ body.preloader-site {
 }
 
 .foto5 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-red-car.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/LISA4461.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -599,7 +599,7 @@ body.preloader-site {
 
 
 .foto6 {
-  background-image: linear-gradient(rgba(95, 2, 2, 0.5), rgba(48, 47, 47, 0.9)), url("../image/sherly-daeng-engagement-ami.jpg");
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/hi.jpg");
   background-size: cover;
   background-position: center;
   background-repeat:no-repeat;
@@ -609,6 +609,7 @@ body.preloader-site {
 
 
 .title-foto {
+  display: none;
   font-size: 18pt;
   font-family: 'Lato';
   font-weight: 700;
@@ -618,6 +619,7 @@ body.preloader-site {
 
 
 .subtitle-foto {
+  display: none;
   font-family: 'Lato';
   font-weight: 700;
   font-size: 14pt;
@@ -628,7 +630,7 @@ body.preloader-site {
 }
 
 .section-light {
-  background-image: url(../image/divider-flowers-leaves.png);
+  background-image: url(../img/divider-flowers-leaves.png);
   background-position: bottom -30px center;
   background-repeat: no-repeat;
   background-size: initial;
