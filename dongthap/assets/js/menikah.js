@@ -33,12 +33,6 @@ $(document).on("click", 'a[href^="#"]', function(event) {
 });
 
 
-$( "body" ).on( "click", ".float", function( event ) {
-  event.preventDefault();
-  console.log(window['weddingGeolocation']);
-  
-});
-
 // When the user scrolls down 20px from the top of the document, show the scroll up button
 window.onscroll = function() {
   scrollFunction();
