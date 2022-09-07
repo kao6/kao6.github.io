@@ -59,7 +59,7 @@ html {
 }
 
 .hero .subtitle {
-  padding: 35px;
+  padding: 0 35px;
   color: whitesmoke;
   font-size: 1rem;
 }
@@ -282,11 +282,6 @@ html {
 .main-content .section-color.tempatngaycuoi .title,
 .main-content .section-color.tempatngaycuoi .subtitle {
   color: white;
-}
-
-.main-content .section-color.tempatngaycuoi .subtitle .pressed{
-  font-size: 2rem;
-  font-weight: 900;
 }
 
 .main-content .section-color.tempatngaycuoi i {
@@ -657,10 +652,40 @@ body.preloader-site {
   padding: 10px;
 }
 
+.patterns {
+  height: 5rem;
+}
+
+
+svg text {
+  letter-spacing: 9px;
+  stroke: #f5f5f5;
+  font-size: 151px;
+  font-weight: 700;
+  stroke-width: 2px;
+  animation: textAnimate 5s infinite alternate;
+}
+
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill:hsl(189, 68%, 75%)
+
+  }
+  
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%,0%)
+  }
+  
+}
+
 @media (max-width: 480px) {
   .hero {
     background-image: url(https://kao6.github.io/assets/img/hi-mobile.jpg);
-    background: linear-gradient(rgba(123, 103, 109, 0.35), rgba(159, 110, 109, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi-mobile.jpg") no-repeat;
+    background: linear-gradient(rgba(205, 146, 164, 0.35), rgba(212, 129, 127, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi-mobile.jpg") no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
     color: white;
@@ -671,15 +696,15 @@ body.preloader-site {
     padding: 0 1em;
   }
    .hero-body{
-    padding-top:11em;
+    padding-top:1em;
    }
 }
 
 .float{
 	position:fixed;
+  padding: 1rem;
 	bottom: 7%;
 	right:40px;
-  padding: 1rem;
 	background-color:#6cc751;
 	color:#FFF;
 	border-radius:50px;
@@ -690,4 +715,12 @@ body.preloader-site {
 
 .my-float{
 	margin-top:22px;
+}
+
+.dot {
+  height: 25px;
+  width: 25px;
+  background-color: white;
+  border-radius: 50%;
+  display: inline-block;
 }

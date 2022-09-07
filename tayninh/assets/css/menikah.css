@@ -59,7 +59,7 @@ html {
 }
 
 .hero .subtitle {
-  padding: 35px;
+  padding: 0 35px;
   color: whitesmoke;
   font-size: 1rem;
 }
@@ -654,6 +654,22 @@ body.preloader-site {
   padding: 10px;
 }
 
+
+.patterns {
+  height: 5rem;
+}
+
+
+svg text {
+  letter-spacing: 9px;
+  stroke: #f5f5f5;
+  font-size: 151px;
+  font-weight: 700;
+  stroke-width: 2px;
+  animation: textAnimate 5s infinite alternate;
+}
+
+
 @media (max-width: 480px) {
   .hero {
     background-image: url(https://kao6.github.io/assets/img/hi-mobile.jpg);
@@ -668,7 +684,7 @@ body.preloader-site {
     padding: 0 1em;
   }
    .hero-body{
-    padding-top:11em;
+    padding-top:1em;
    }
 }
 
@@ -696,3 +712,4 @@ body.preloader-site {
   border-radius: 50%;
   display: inline-block;
 }
+
