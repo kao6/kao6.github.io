@@ -32,7 +32,6 @@ $(document).on("click", 'a[href^="#"]', function(event) {
   );
 });
 
-
 // When the user scrolls down 20px from the top of the document, show the scroll up button
 window.onscroll = function() {
 };
@@ -47,15 +46,11 @@ function scrollFunction() {
 
 // Preloader
 $(document).ready(function($) {
-  const DONG_THAP=1;
-  const TAY_NINH=0;
   $(".preloader-wrapper").fadeOut();
   $("body").removeClass("preloader-site");
-  window['weddingGeolocation']='dongthap';
 });
 
-$(window).load(function() {
-  var Body = $("body");
-  Body.addClass("preloader-site");
- 
-});
+// $(window).load(function() {
+//   var Body = $("body");
+//   Body.addClass("preloader-site");
+// });

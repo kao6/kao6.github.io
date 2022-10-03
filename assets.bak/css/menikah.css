@@ -40,7 +40,7 @@ html {
 
 .hero {
   background-image: url(https://picsum.photos/id/25/1920/1080);
-  background: linear-gradient(rgb(229 184 129 / 0%), rgb(228 165 94 / 46%)), rgb(130 48 48 / 39%)url("https://kao6.github.io/assets/img/hi.jpg") no-repeat;
+  background: linear-gradient(rgba(153, 110, 109, 0.65), rgba(153, 110, 109, 0.65)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi.jpg") no-repeat;
   /* background-attachment: fixed; */
   background-size: cover;
   color: white;
@@ -283,8 +283,6 @@ html {
 .main-content .section-color.tempatngaycuoi .subtitle {
   color: white;
 }
-
-
 
 .main-content .section-color.tempatngaycuoi i {
   font-size: 3rem;
@@ -654,7 +652,6 @@ body.preloader-site {
   padding: 10px;
 }
 
-
 .patterns {
   height: 5rem;
   background:none;
@@ -670,11 +667,26 @@ svg text {
   animation: textAnimate 5s infinite alternate;
 }
 
+@keyframes textAnimate {
+  0% {
+    stroke-dasharray: 0 50%;
+    stroke-dashoffset:  20%;
+    fill:hsl(189, 68%, 75%)
+
+  }
+  
+  100% {
+    stroke-dasharray: 50% 0;
+    stroke-dashoffstet: -20%;
+    fill: hsla(189, 68%, 75%,0%)
+  }
+  
+}
 
 @media (max-width: 480px) {
   .hero {
     background-image: url(https://kao6.github.io/assets/img/hi-mobile.jpg);
-    background: linear-gradient(rgba(123, 103, 109, 0.35), rgba(159, 110, 109, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi-mobile.jpg") no-repeat;
+    background: linear-gradient(rgba(205, 146, 164, 0.35), rgba(212, 129, 127, 0.25)), rgba(0, 0, 0, 0.55) url("https://kao6.github.io/assets/img/hi-mobile.jpg") no-repeat;
     /* background-attachment: fixed; */
     background-size: cover;
     color: white;
@@ -709,8 +721,7 @@ svg text {
 .dot {
   height: 25px;
   width: 25px;
-  background-color: #bbb;
+  background-color: white;
   border-radius: 50%;
   display: inline-block;
 }
-

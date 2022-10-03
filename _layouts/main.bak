@@ -3,8 +3,8 @@ layout: default
 ---
 <body>
     <!-- Floating button-->
-      <a href="/dongthap" class="float">
-        <i class="fa fa-arrow-circle-o-right"></i>Dành cho khách mời tại Đồng Tháp
+      <a href="/tayninh" class="float">
+        <i class="fa fa-arrow-circle-o-right"></i>Dành cho khách mời tại Tây Ninh
       </a>
     <!-- Begin Preloader -->
     <div class="preloader-wrapper">
@@ -58,26 +58,26 @@ layout: default
         <!-- Begin Hero Content-->
         <div class="hero-body">
           <div class="container has-text-centered">
-            <h1 class="subtitle">LỄ THÀNH HÔN</h1>
+            <h1 class="subtitle">LỄ VU QUY</h1>
             <h2 class="title"> Khánh & Duyên</h2>
               <div class="patterns">
                 <svg width="100%" height="100%" style="
                 background: none;
             ">
                <text class="subtitle tempatngaycuoi pressed" x="50%" y="60%"  text-anchor="middle"  style="font-size:2rem" >
-                TÂY NINH
+                ĐỒNG THÁP
                </text>
                </svg>
               </div>
-              <h4 class="subtitle tempatngaycuoi">
+              <!-- <span class="subtitle tempatngaycuoi pressed">Đồng Tháp</span> -->
+              <h4>
+            </br>
+                Thứ 7, 01 Tháng 10, 2022
                 </br>
-                Thứ 7, 15 Tháng 10, 2022
-                </br>
-                {{ page.excerpt }}
+                Trại tôm giống Minh Quân, Đồng Tháp
                 </br>
                 Việt Nam
-              
-            </h4>
+              </h4>
           </div>
           <!-- Start Countdown -->       
           <div>
@@ -99,7 +99,7 @@ layout: default
               var year = now.getFullYear() + 1;
           
               var nextyear = month + '/' + day + '/' + year + ' 07:07:07';
-              var targetDate = '10/15/2022 11:00:00';
+              var targetDate = '10/01/2022 11:00:00';
 
               $('#countdown').countdown({
                 date: targetDate, // TODO Date format: 07/27/2017 17:00:00
@@ -197,36 +197,34 @@ layout: default
             
               <p class="is-larger has-text-centered">
                   <div class="ngaycuoi tanggal-hari has-text-centered">Ngày</div> 
-                  <div class="ngaycuoi tanggal-angka has-text-centered">15</div>
+                  <div class="ngaycuoi tanggal-angka has-text-centered">01</div>
                   <div class="ngaycuoi tanggal-bulan has-text-centered">Tháng 10, 2022</div>
               </p>
             
             </div>
             <div class="column is-4 has-vertically-aligned-content">
               <p class="ngaycuoi is-larger has-text-centered">
-                Đón Khách  
+                Giờ làm lễ
                 <br>
-                <strong>10:30 AM</strong>
+                <strong>7:00 AM</strong>
               </p>
-            
             </div>
 
             <div class="column is-4 has-vertically-aligned-content">
-              
-              <h1 class="ngaycuoi is-larger has-text-centered">
-                Đãi tiệc
+              <p class="ngaycuoi is-larger has-text-centered">
+                Dress Code:
                 <br>
-                <strong>11:00 AM</strong>
+                <span class="dot nude"></span>
+                <span class="dot" style="background-color: #E5D2C4"></span>
+                <span class="dot" style="background-color: black;"></span>
               </h1>
-              
-              
             </div>
 
           </div>
         </div>
         <div class="space40px"></div>
         <div class="main-content has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-          <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=%F0%9F%92%8DL%E1%BB%85%20Th%C3%A0nh%20H%C3%B4n%20Kh%C3%A1nh%20v%C3%A0%20Duy%C3%AAn&dates=20221015T033000Z/20221015T93000Z&details=www.khanhduyen.online&location=83CJ+W9,%20Ph%C6%B0%E1%BB%9Dng%201,%20T%C3%A2y%20Ninh,%20Vietnam" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
+          <a href="https://calendar.google.com/calendar/u/0/r/eventedit?text=💍L%E1%BB%85%20Th%C3%A0nh%20H%C3%B4n%20Kh%C3%A1nh%20v%C3%A0%20Duy%C3%AAn&dates=20221001T033000Z/20221001T93000Z&details=www.khanhduyen.online&location=Trai+Tom+giong+minh+quan" target="_blank" class="button has-tooltip btn-cta" data-tooltip="Add to Calendar" target="_blank" data-aos="zoom-in">
             <i class="far fa-calendar-plus"></i>
             &nbsp;&nbsp;Google Calendar
           </a>
@@ -240,19 +238,19 @@ layout: default
           <div class="column is-12 regular-section" data-aos="fade-up" data-aos-easing="linear">
             <h1 class="title has-text-centered section-title">Địa Chỉ</h1>
             <p class="tempat is-larger has-text-centered">
-              <strong>Tĩnh gia Vườn Xưa, Gần Quán Cafe Hẻm Phường 1</strong>
+              <strong>Trại tôm giống Minh Quân</strong>
               <br>
-              Thành Phố, Tây Ninh
+              Đồng Tháp
               <br>
             </p>
           </div>
           
           <div class="section-map" data-aos="fade-up" data-aos-easing="linear">
-            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://www.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=H%E1%BA%BBm+Coffee,+Ph%C6%B0%E1%BB%9Dng+1,+T%C3%A2y+Ninh&amp;t&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a></iframe>
+            <iframe width="100%" height="600" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=tr%E1%BA%A1i%20t%C3%B4m%20gi%E1%BB%91ng%20minh%20qu%C3%A2n+(minh%20quan%20)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"><a href="https://www.maps.ie/distance-area-calculator.html">measure distance on map</a></iframe>
           </div>
           <div class="space40px"></div>
           <div class="has-text-centered" data-aos="fade-up" data-aos-easing="linear">
-            <a href="https://www.google.com/maps/dir//H%E1%BA%BBm+Coffee,+Ph%C6%B0%E1%BB%9Dng+1,+T%C3%A2y+Ninh/@10.3665779,105.5938267,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x310b6b449ee3de7f:0x736fba21f3ddd0e0!2m2!1d106.0808861!2d11.322347?hl=en" class="button btn-cta" target="_blank" data-aos="zoom-in">
+            <a href="https://www.google.com/maps/dir//Tr%E1%BA%A1i+t%C3%B4m+gi%E1%BB%91ng+Minh+Qu%C3%A2n,+L%E1%BA%A5p+V%C3%B2+District,+Dong+Thap,+Vietnam/@10.3665779,105.5938267,13z/data=!4m8!4m7!1m0!1m5!1m1!1s0x310a7af7fb2528c3:0x9288ef5973d71f42!2m2!1d105.6288257!2d10.3665371?hl=en" class="button btn-cta" target="_blank" data-aos="zoom-in">
               <i class="far fa-directions"></i>
               &nbsp;&nbsp;Google Maps
             </a>
@@ -359,7 +357,7 @@ layout: default
             <div class="column is-12 prolog has-text-centered" data-aos="fade-up" data-aos-easing="linear">
               <p class="h2 subtitle">
                 <br>
-                Sự hiện diện của quý khách là vinh hạnh của chúng tôi
+                Sự hiện diện của quý khách 
                   <br>
                   là vinh hạnh của chúng tôi
                 </p>
