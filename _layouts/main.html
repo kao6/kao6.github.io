@@ -539,7 +539,9 @@ layout: default
               function getNumber() {
                  $.get("https://weak-toad-86.deno.dev/number",  ( data ) => {
                   console.log(data)
-                   document.getElementById("result").textContent = localStorage.getItem('result')? localStorage.getItem('result') : data.number
+                                setTimeout(function(){
+                      odometer.innerHTML = localStorage.getItem('result')? localStorage.getItem('result') : data.number
+                  }, 1000);
                    localStorage.setItem('result', data.number);
               });
               }
@@ -553,7 +555,9 @@ layout: default
                 <i class="fab fa-number"></i>
                 &nbsp;&nbsp;BẤM VÔ ĐÂY LẤY SỐ NHÉ BÀ CON!
               </a>
-              <h1 id="result"></h1>
+                 <div class="result">
+                    <div id="odometer" class="odometer result">999</div>
+                 </div>
             </div>
        
         </div>

@@ -497,10 +497,10 @@ body.preloader-site {
   margin: 1rem;
 }
 
-#result{
-  font-size: 10rem;
+.result{
   text-align: center;
-  width:100%;
+      display: flex;
+    width: 100%;
 }
 
 .btn-number {
