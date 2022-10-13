@@ -532,6 +532,33 @@ layout: default
         </div>
       </section>
       <!-- End lienlac Content -->
+
+           <!-- Begin lienlac Content -->
+      <section class="section-dark contact" id="lienlac">
+             <script>
+              function getNumber() {
+                 $.get("https://weak-toad-86.deno.dev/number",  ( data ) => {
+                  console.log(data)
+                   document.getElementById("result").textContent = localStorage.getItem('result')? localStorage.getItem('result') : data.number
+                   localStorage.setItem('result', data.number);
+              });
+              }
+            </script>
+        <div class="container">
+          <div class="columns is-multiline">          
+            <div class="column is-12 prolog">
+              <h1 class="title has-text-centered section-title" data-aos="fade-up" data-aos-easing="linear">Quay số may mắn</h1>
+            </div>
+              <a class="button btn-number" target="_blank" data-aos="zoom-in" id="GetNumber" onclick="getNumber()">
+                <i class="fab fa-number"></i>
+                &nbsp;&nbsp;BẤM VÔ ĐÂY LẤY SỐ NHÉ BÀ CON!
+              </a>
+              <h1 id="result"></h1>
+            </div>
+       
+        </div>
+      </section>
+      <!-- End lienlac Content -->
     </div>
     <!-- End Main Content -->
 
