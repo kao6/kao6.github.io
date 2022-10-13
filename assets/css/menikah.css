@@ -667,6 +667,42 @@ body.preloader-site {
   min-height: 24rem;
 }
 
+.foto-nhanwedding {
+  background-image: url("../img/foto-nhanwedding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 20rem;
+  border:15px solid #f4e2e2;
+}
+
+.foto-vanflower {
+  background-image: url("../img/foto-vanflower.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 20rem;
+  border:15px solid #f4e2e2;
+}
+
+@media (max-width: 480px) {
+  .foto-nhanwedding {
+  background-image: url("../img/foto-nhanwedding.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 9rem;
+  border:15px solid #f4e2e2;
+}
+.foto-vanflower {
+  background-image: url("../img/foto-vanflower.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 9rem;
+  border:15px solid #f4e2e2;
+}
+}
 
 .title-foto {
   display: none;
