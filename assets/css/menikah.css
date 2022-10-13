@@ -500,6 +500,7 @@ body.preloader-site {
 #result{
   font-size: 10rem;
   text-align: center;
+  width:100%;
 }
 
 .btn-number {
