@@ -615,6 +615,59 @@ body.preloader-site {
 
 
 
+
+.foto11 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/tubuu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
+.foto12 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/xoiga.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
+.foto13 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/lagu.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
+.foto14 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/behapxa.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto15 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/lauthai.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+.foto16 {
+  background-image: linear-gradient(rgba(95, 2, 2, 0.1), rgba(48, 47, 47, 0.4)), url("../img/nhomi.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat:no-repeat;
+  min-height: 24rem;
+}
+
+
 .title-foto {
   display: none;
   font-size: 18pt;
